@@ -1,0 +1,263 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  
+}
+
+.main-header {
+  background-image: linear-gradient(rgb(197, 141, 137), rgb(252, 232, 204));
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 48px;
+  z-index: 99999;
+
+}
+
+.header-info {
+  text-align: left;
+  color: rgb(219, 84, 75);
+  position: absolute;
+  left: 0;
+  padding: 0;
+  margin: 14px 14px 0 14px;
+}
+
+.header-info a {
+  padding: 0;
+  text-decoration: none;
+}
+
+.header-info a:hover {
+  background-color: transparent;
+}
+
+nav {
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(219, 84, 75);
+  padding: 15px;
+  float: left;
+}
+
+a:hover {
+  background-color: burlywood;
+}
+
+.jumbotron-section {
+  background-color: oklch(98.7% 0.022 95.277);
+}
+
+.jumbotron-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1280px;
+  height: 100vh;
+  margin-inline: auto;
+  padding-top: 60px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.jumbotron-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-inline: 100px;
+}
+
+.jumbotron-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cafe-ilustrasi {
+  width: 400px;
+  /* width: 200px; */
+}
+
+.product-section {
+  margin-bottom: 65px;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-block: 120px;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card {
+  display: flex;
+  grid-column: span 3 / span 3;
+  flex-direction: column;
+  padding: 2px;
+  box-shadow: 2px 5px 33px -6px rgba(55, 55, 55, 0.75);
+  -webkit-box-shadow: 2px 5px 33px -6px rgba(55, 55, 55, 0.75);
+  -moz-box-shadow: 2px 5px 33px -6px rgba(55, 55, 55, 0.75);
+  height: fit-content;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.order-button {
+    background-color: rgb(219, 84, 75);
+  color: azure;
+  border: 1px solid;
+  border-radius: 9px;
+  padding: 12px;
+  padding-inline: 24px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  width: auto;
+  
+}
+
+.order-button:hover {
+  scale: 1.10;
+}
+
+.product-card-heading {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  margin-top: 12px;
+}
+
+.product-card:hover {
+  scale: 1.05;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 768px;
+  margin-inline: auto;
+  padding-bottom: 50px
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-input {
+  width: 100%; padding: 12px; border: 1px solid #896129; border-radius: 12px;
+}
+
+.form-label{
+  width: 100%;
+}
+
+.submit-button {
+  background-color: rgb(219, 84, 75);
+  color: azure;
+  border: 1px solid;
+  border-radius: 9px;
+  padding: 12px;
+  padding-inline: 24px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.submit-button:hover {
+  scale: 1.05;
+}
+
+footer {
+  background-color: oklch(98.7% 0.022 95.277);;
+}
+
+
+.footer-container {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 768px;
+  margin-inline: auto;
+  padding-bottom: 50px
+}
+
+.footer a {
+  color: rgb(219, 84, 75);
+  cursor: pointer;
+}
+
+
+/* About Index */
+
+.about-section {
+  background-color: oklch(98.7% 0.022 95.277);
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1280px;
+  height: 100vh;
+  margin-inline: auto;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-inline: 100px;
+}
+
+.about-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.about-me {
+  width: 400px;
+}
+
+
+/* responsive  */
+@media (width >= 64rem) { 
+  .jumbotron-container {
+    flex-direction: row;
+    
+  }
+ }

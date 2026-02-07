@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FM Culinary</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="main-header">
+        <h3 class="header-info">
+          <a href="index.html"> FM Culinary </a>
+        </h3>
+        <nav>
+          <a href="">Home</a>
+          <a href="">Price</a>
+          <a href="about.html">About Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="jumbotron-section">
+        <div class="jumbotron-container">
+          <div class="jumbotron-content">
+            <h1>FM Culinary</h1>
+            <p>
+              Welcome to Fm Culinary, your number one source for all things
+              delicious. We're dedicated to providing you the very best of
+              culinary delights, with an emphasis on quality, taste, and
+              customer satisfaction.
+            </p>
+            <p>
+              Founded in 2020, Fm Culinary has come a long way from its
+              beginnings. When we first started out, our passion for creating
+              mouth-watering dishes drove us to start our own business. We hope
+              you enjoy our products as much as we enjoy offering them to you.
+              If you have any
+            </p>
+            <p>questions or comments, please don't hesitate to contact us.</p>
+          </div>
+          <div class="jumbotron-image">
+            <img class="cafe-ilustrasi" src="assets/coffe.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="product-section">
+        <div class="product-container">
+          <div class="product-card">
+            <img
+              src="FM Culinary/photo-1567171466295-4afa63d45416.jpeg"
+              alt="1"
+              style="width: 100%; height: 300px; object-fit: cover"
+            />
+
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                row-gap: 12px;
+                padding-bottom: 12px;
+              "
+            >
+              <p class="product-card-heading">Cheese cake</p>
+              <p>IDR : 13.000</p>
+              <button class="order-button" onclick="storeToArray(13000)">Order</button>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="FM Culinary/photo-1581996323441-538096e854b9.jpeg"
+              alt="1"
+              style="width: 100%; height: 300px; object-fit: cover"
+            />
+
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                row-gap: 12px;
+                padding-bottom: 12px;
+              "
+            >
+              <p class="product-card-heading">Americano</p>
+              <p>IDR : 14.000</p>
+              <button class="order-button" onclick="storeToArray(14000)">Order</button>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="FM Culinary/photo-1618411640018-972400a01458.jpeg"
+              alt="1"
+              style="width: 100%; height: 300px; object-fit: cover"
+            />
+
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                row-gap: 12px;
+                padding-bottom: 12px;
+              "
+            >
+              <p class="product-card-heading">Flavoured Donuts</p>
+              <p>IDR : 15.000</p>
+              <button class="order-button" onclick="storeToArray(15000)">Order</button>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="FM Culinary/photo-1717603545758-88cc454db69b.jpeg"
+              alt="1"
+              style="width: 100%; height: 300px; object-fit: cover"
+            />
+
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                row-gap: 12px;
+                padding-bottom: 12px;
+              "
+            >
+              <p class="product-card-heading">Matcha</p>
+              <p>IDR : 17.000</p>
+              <button class="order-button" onclick="storeToArray(17000)">Order</button>
+            </div>
+          </div>
+          
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+            <button class="order-button" >
+              <span>IDR</span>
+              <span id="totalPrice">0</span>
+            </button>
+          </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-container">
+          <div class="contact-p">
+            <h1 style="text-align: center">Contact Us</h1>
+            <p style="text-align: center">
+              Got a technical issue? want to send feedback about our feature?
+              Need details about our Business plan? Let us Know <br />
+              <br />
+            </p>
+          </div>
+          <form
+            action="https://formsubmit.co/timedooracademy@gmail.com"
+            method="post"
+            class="contact-form"
+          >
+            <label for="email" class="form-label">Your Email</label><br />
+            <input
+              class="form-input"
+              placeholder="Isikan Email Kamu..."
+              type="text"
+              id="email"
+              name="email"
+            /><br />
+            <label for="subject" class="form-label">Subject</label><br />
+            <input
+              class="form-input"
+              placeholder="Let us know how we can help you..."
+              type="text"
+              id="subject"
+              name="subject"
+            /><br />
+            <label for="messages" class="form-label">Your Message</label><br />
+            <textarea
+              class="form-input"
+              placeholder="Leave a comment..."
+              name="messages"
+              id="messages"
+            ></textarea
+            ><br />
+            <div style="width: 100%">
+              <input
+                class="submit-button"
+                type="submit"
+                style="font-size: medium"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-p">
+          <h3 style="text-align: center">FM Culinary</h3>
+
+          <p class="footer-text">
+            Open source library of over 400+ web components and interactive
+            elements built for better web
+          </p>
+        </div>
+        <br />
+        <div class="footera">
+          <a href="about.html">About</a>
+          <a href="#">Blog</a>
+          <a href="#">FAQs</a>
+          <a href="#">Contact</a>
+        </div>
+        <br />
+        <span class="copyright"
+          >@ 2025 <a href="#">FM Culinary™</a>. All Rights reserved</span
+        >
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
