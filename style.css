@@ -133,8 +133,32 @@ a:hover {
   
 }
 
+.complete-button {
+     background-color: rgb(47, 146, 52);
+  color: azure;
+  border: 1px solid;
+  border-radius: 9px;
+  padding: 12px;
+  padding-inline: 24px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  width: auto;
+  
+}
+
+.complete-button:hover {
+  scale: 1.05;
+}
+
 .order-button:hover {
   scale: 1.10;
+}
+
+.qr {
+  background-color: rgb(165, 231, 168);
+  padding: 12px;
+  border: 2px solid rgb(46, 157, 16);
+  border-radius: 12px;
 }
 
 .product-card-heading {

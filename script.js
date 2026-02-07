@@ -13,9 +13,16 @@ function storeToArray(price) {
     total = increment(keranjang)
     console.log(total);
     
-    totalPrice.innerText = increment(keranjang)
+    totalPrice.innerText = total
 
 
+}
+
+function showQr() {
+    var qrcode = document.getElementById("qrcode")
+    var qrcoder = document.getElementById("qrcoder")
+    qrcode.style.display = "flex"
+    qrcoder.style.display = "flex"
 }
 
 console.log(keranjang)
