@@ -16,7 +16,7 @@
       </h3>
       <nav>
         <a href="">Home</a>
-        <a href="">Price</a>
+        <a href="#">Price</a>
         <a href="about.html">About Us</a>
       </nav>
     </div>
@@ -50,7 +50,7 @@
     <section class="product-section">
       <div class="product-container">
         <div class="product-card">
-          <img src="FM Culinary/photo-1567171466295-4afa63d45416.jpeg" alt="1"
+          <img class="product-pict" src="FM Culinary/photo-1567171466295-4afa63d45416.jpeg" alt="1"
             style="width: 100%; height: 300px; object-fit: cover" />
 
           <div style="
@@ -67,8 +67,8 @@
           </div>
         </div>
         <div class="product-card">
-          <img src="FM Culinary/photo-1581996323441-538096e854b9.jpeg" alt="1"
-            style="width: 100%; height: 300px; object-fit: cover" />
+          <img class="product-pict" src="FM Culinary/photo-1581996323441-538096e854b9.jpeg" alt="1"
+            style="width: 100%; height: 300px; object-fit: cover"/>
 
           <div style="
                 display: flex;
@@ -84,7 +84,7 @@
           </div>
         </div>
         <div class="product-card">
-          <img src="FM Culinary/photo-1618411640018-972400a01458.jpeg" alt="1"
+          <img class="product-pict" src="FM Culinary/photo-1618411640018-972400a01458.jpeg" alt="1"
             style="width: 100%; height: 300px; object-fit: cover" />
 
           <div style="
@@ -101,7 +101,7 @@
           </div>
         </div>
         <div class="product-card">
-          <img src="FM Culinary/photo-1717603545758-88cc454db69b.jpeg" alt="1"
+          <img class="product-pict" src="FM Culinary/photo-1717603545758-88cc454db69b.jpeg" alt="1"
             style="width: 100%; height: 300px; object-fit: cover" />
 
           <div style="
@@ -119,6 +119,17 @@
         </div>
 
       </div>
+
+      <div>
+        <button class="modal-button" onclick="" style="display: flex; justify-content: center; align-items: center;"> Show Modal </button>
+        <div class="modal-container" style="visibility: hidden;">
+          <div class="modal">
+            <h3>This is Modal</h3>
+            <span class="modal-ex">x</span>
+          </div>
+        </div>
+      </div>
+
       <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
         <button class="complete-button" onclick="showQr()">
           <span>Complete your Order</span>
