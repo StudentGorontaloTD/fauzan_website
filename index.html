@@ -1,197 +1,234 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FM Culinary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FM Culinary</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-  <header>
-    <div class="main-header">
-      <h3 class="header-info">
-        <a href="index.html"> FM Culinary </a>
-      </h3>
+  <body>
+    <div class="page-transition"></div>
+
+    <audio id="ambientMusic" autoplay loop>
+      <source src="assets/ADTurnUp - Stargirl.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <div class="logo">FM Culinary</div>
+      <span id="openStatus" class="open-status"></span>
       <nav>
-        <a href="">Home</a>
-        <a href="#">Price</a>
-        <a href="about.html">About Us</a>
+        <a href="#story">Story</a>
+        <a href="#menu">Menu</a>
+        <a href="about.html">About</a>
       </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="video-background">
+        <video id="heroVideo" autoplay muted playsinline>
+          <source
+            src="assets/Restaurant Ad Video Template (Editable).mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div class="hero-overlay"></div>
+      <div class="grain"></div>
+
+      <div class="hero-content">
+        <h1 class="hero-title hero-animate hero-delay-1">
+          Where Flavor Meets Atmosphere
+        </h1>
+
+        <p class="hero-sub hero-animate hero-delay-2">
+          An intimate café experience crafted with warmth & elegance.
+        </p>
+
+        <a href="#menu" class="btn-primary hero-animate hero-delay-3">
+          Discover Menu
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= STORY ================= -->
+    <section id="story" class="section reveal">
+      <div class="two-col">
+        <div>
+          <h2>Our Philosophy</h2>
+          <p>
+            Every sip tells a story. Every dish is a memory waiting to be
+            shared. Experience the warmth of a boutique café crafted for
+            meaningful moments.
+          </p>
+        </div>
+        <img src="assets/a.jfif" alt="FM Culinary" />
+      </div>
+    </section>
+
+    <!-- ================= MENU ================= -->
+    <section id="menu" class="section-dark reveal">
+      <h2 class="section-title reveal">Signature Creations</h2>
+
+      <div class="menu-grid">
+        <div class="menu-card reveal">
+          <img src="FM Culinary/photo-1567171466295-4afa63d45416.jpeg" />
+          <h3>Cheese Cake</h3>
+          <p>Rp 13.000</p>
+          <button onclick="storeToArray(13000, this)">Add to Cart</button>
+        </div>
+
+        <div class="menu-card reveal">
+          <img src="FM Culinary/photo-1581996323441-538096e854b9.jpeg" />
+          <h3>Americano</h3>
+          <p>Rp 14.000</p>
+          <button onclick="storeToArray(14000, this)">Add to Cart</button>
+        </div>
+
+        <div class="menu-card reveal">
+          <img src="FM Culinary/photo-1618411640018-972400a01458.jpeg" />
+          <h3>Flavoured Donuts</h3>
+          <p>Rp 15.000</p>
+          <button onclick="storeToArray(15000, this)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MAP ================= -->
+    <section class="section-dark reveal">
+      <h2 class="section-title">Visit Us</h2>
+
+      <div class="map-preview-wrapper">
+        <div class="map-preview">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.35167988480146!2d123.06256902579635!3d0.561282665014045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32792bd7e9565917%3A0x4ce3e67b27d612fb!2sCreative%20Arts!5e0!3m2!1sid!2sid!4v1771611359007!5m2!1sid!2sid"
+            loading="lazy"
+            style="border: 0"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+
+        <div class="map-info-card">
+          <h3>FM Culinary</h3>
+          <p>Gorontalo, Indonesia</p>
+          <p>Open Daily — 10:00 AM to 11:00 PM</p>
+          <a href="about.html#location" class="btn-primary">
+            View Full Location
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CART ICON ================= -->
+    <div id="cartIcon" class="cart-icon" style="display: none">
+      🛒 <span id="cartCount">0</span>
     </div>
-  </header>
 
-  <main>
-    <section class="jumbotron-section">
-      <div class="jumbotron-container">
-        <div class="jumbotron-content">
-          <h1>FM Culinary</h1>
-          <p>
-            Welcome to Fm Culinary, your number one source for all things
-            delicious. We're dedicated to providing you the very best of
-            culinary delights, with an emphasis on quality, taste, and
-            customer satisfaction.
-          </p>
-          <p>
-            Founded in 2020, Fm Culinary has come a long way from its
-            beginnings. When we first started out, our passion for creating
-            mouth-watering dishes drove us to start our own business. We hope
-            you enjoy our products as much as we enjoy offering them to you.
-            If you have any
-          </p>
-          <p>questions or comments, please don't hesitate to contact us.</p>
-        </div>
-        <div class="jumbotron-image">
-          <img class="cafe-ilustrasi" src="assets/coffe.png" alt="" />
-        </div>
-      </div>
-    </section>
-    <section class="product-section">
-      <div class="product-container">
-        <div class="product-card">
-          <img class="product-pict" src="FM Culinary/photo-1567171466295-4afa63d45416.jpeg" alt="1"
-            style="width: 100%; height: 300px; object-fit: cover" />
-
-          <div style="
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                row-gap: 12px;
-                padding-bottom: 12px;
-              ">
-            <p class="product-card-heading">Cheese cake</p>
-            <p>IDR : 13.000</p>
-            <button class="order-button" onclick="storeToArray(13000)">Order</button>
-          </div>
-        </div>
-        <div class="product-card">
-          <img class="product-pict" src="FM Culinary/photo-1581996323441-538096e854b9.jpeg" alt="1"
-            style="width: 100%; height: 300px; object-fit: cover"/>
-
-          <div style="
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                row-gap: 12px;
-                padding-bottom: 12px;
-              ">
-            <p class="product-card-heading">Americano</p>
-            <p>IDR : 14.000</p>
-            <button class="order-button" onclick="storeToArray(14000)">Order</button>
-          </div>
-        </div>
-        <div class="product-card">
-          <img class="product-pict" src="FM Culinary/photo-1618411640018-972400a01458.jpeg" alt="1"
-            style="width: 100%; height: 300px; object-fit: cover" />
-
-          <div style="
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                row-gap: 12px;
-                padding-bottom: 12px;
-              ">
-            <p class="product-card-heading">Flavoured Donuts</p>
-            <p>IDR : 15.000</p>
-            <button class="order-button" onclick="storeToArray(15000)">Order</button>
-          </div>
-        </div>
-        <div class="product-card">
-          <img class="product-pict" src="FM Culinary/photo-1717603545758-88cc454db69b.jpeg" alt="1"
-            style="width: 100%; height: 300px; object-fit: cover" />
-
-          <div style="
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                row-gap: 12px;
-                padding-bottom: 12px;
-              ">
-            <p class="product-card-heading">Matcha</p>
-            <p>IDR : 17.000</p>
-            <button class="order-button" onclick="storeToArray(17000)">Order</button>
-          </div>
+    <!-- ================= CART MODAL ================= -->
+    <div id="cartModal" class="cart-modal">
+      <div class="cart-content">
+        <!-- HEADER -->
+        <div class="cart-header">
+          <h3>Your Cart</h3>
+          <button id="closeCart" class="close-cart">×</button>
         </div>
 
-      </div>
+        <ul id="cartList"></ul>
+        <p>Total: <strong id="cartTotal">Rp 0</strong></p>
 
-      <div>
-        <button class="modal-button" onclick="" style="display: flex; justify-content: center; align-items: center;"> Show Modal </button>
-        <div class="modal-container" style="visibility: hidden;">
-          <div class="modal">
-            <h3>This is Modal</h3>
-            <span class="modal-ex">x</span>
-          </div>
+        <!-- ORDER TYPE -->
+        <div id="checkoutSection">
+          <select id="orderType">
+            <option value="">Select Order Type</option>
+            <option value="Dine In">Dine In</option>
+            <option value="Takeaway">Takeaway</option>
+          </select>
+
+          <input
+            type="text"
+            id="tableNumber"
+            placeholder="Table Number (for Dine In)"
+            style="display: none"
+          />
         </div>
-      </div>
 
-      <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
-        <button class="complete-button" onclick="showQr()">
-          <span>Complete your Order</span>
-          <span>IDR</span>
-          <span id="totalPrice">0</span>
-        </button>
-      </div>
-      <div id="qrcode" style="display: none; align-items: center; justify-content: center; width: 100%; margin-top: 100px;">
-        <img src="assets/qr.png" alt="">
-      </div>
-      <div id="qrcoder" style="display: none; align-items: center; justify-content: center; width: 100%;">
-        <p class="qr">Scan this barcode to finish payment</p>
-      </div>
-    </section>
+        <!-- PAYMENT -->
+        <div id="paymentSection">
+          <select id="paymentMethod">
+            <option value="">Select Payment Method</option>
+            <option value="QRIS">QRIS</option>
+            <option value="Bank">Bank Transfer</option>
+            <option value="COD">Cash On Delivery</option>
+          </select>
 
-    <section class="contact-section">
-      <div class="contact-container">
-        <div class="contact-p">
-          <h1 style="text-align: center">Contact Us</h1>
-          <p style="text-align: center">
-            Got a technical issue? want to send feedback about our feature?
-            Need details about our Business plan? Let us Know <br />
-            <br />
-          </p>
+          <div id="paymentDetails"></div>
+          <p id="countdownTimer"></p>
+
+          <button id="payNow">Pay Now</button>
+          <div id="paymentStatus"></div>
         </div>
-        <form action="https://formsubmit.co/timedooracademy@gmail.com" method="post" class="contact-form">
-          <label for="email" class="form-label">Your Email</label><br />
-          <input class="form-input" placeholder="Isikan Email Kamu..." type="text" id="email" name="email" /><br />
-          <label for="subject" class="form-label">Subject</label><br />
-          <input class="form-input" placeholder="Let us know how we can help you..." type="text" id="subject"
-            name="subject" /><br />
-          <label for="messages" class="form-label">Your Message</label><br />
-          <textarea class="form-input" placeholder="Leave a comment..." name="messages" id="messages"></textarea><br />
-          <div style="width: 100%">
-            <input class="submit-button" type="submit" style="font-size: medium" />
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="footer-container">
-      <div class="footer-p">
-        <h3 style="text-align: center">FM Culinary</h3>
 
-        <p class="footer-text">
-          Open source library of over 400+ web components and interactive
-          elements built for better web
+        <button id="clearCart">Clear Cart</button>
+
+        <!-- HISTORY -->
+        <h4>Order History</h4>
+        <ul id="orderHistory"></ul>
+
+        <p>
+          <strong>Today's Revenue:</strong>
+          <span id="dailyRevenue">Rp 0</span>
+        </p>
+
+        <p>
+          <strong>Total Orders:</strong>
+          <span id="totalOrders">0</span>
         </p>
       </div>
-      <br />
-      <div class="footera">
-        <a href="about.html">About</a>
-        <a href="#">Blog</a>
-        <a href="#">FAQs</a>
-        <a href="#">Contact</a>
-      </div>
-      <br />
-      <span class="copyright">@ 2025 <a href="#">FM Culinary™</a>. All Rights reserved</span>
     </div>
-  </footer>
-  <script src="script.js"></script>
-</body>
 
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer-lux reveal">
+      <div class="footer-divider"></div>
+
+      <div class="footer-container">
+        <div>
+          <h3>FM Culinary</h3>
+          <p>Crafted with passion. Served with elegance.</p>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+
+          <a
+            href="https://wa.me/6289653303083"
+            target="_blank"
+            class="social-link"
+          >
+            WhatsApp
+          </a>
+
+          <a
+            href="https://instagram.com/not.ojan"
+            target="_blank"
+            class="social-link"
+          >
+            Instagram
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2026 FM Culinary — All Rights Reserved</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
